@@ -5,6 +5,7 @@
    "type": "module",
    "scripts": {
       "start": "node -r dotenv/config bin/www.js",
+      "dev": "nodemon -r dotenv/config bin/www.js",
       "dbcreatetable": "node -r dotenv/config ./db/scripts/createResourceTable.js",
       "dbpopulatetable": "node -r dotenv/config ./db/scripts/populateResourceTable.js"
    },
@@ -17,5 +18,8 @@
       "express": "~4.16.1",
       "morgan": "~1.9.1",
       "pg": "^8.7.1"
+   },
+   "devDependencies": {
+      "nodemon": "^2.0.15"
    }
 }
