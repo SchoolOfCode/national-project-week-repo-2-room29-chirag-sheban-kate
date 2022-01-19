@@ -10,3 +10,4 @@ async function getAllResources() {
 }
 
 export default getAllResources;
+getAllResources();
