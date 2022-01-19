@@ -46,6 +46,10 @@ app.get("/resources/:id", async function (req, res, next) {
    });
 });
 
+//UPDATE
+//DELETE
+//POST
+
 app.use(function (err, req, res, next) {
    console.error(err.stack);
    res.status(500).json(err);
