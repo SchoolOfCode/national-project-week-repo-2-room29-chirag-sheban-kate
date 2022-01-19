@@ -1,6 +1,7 @@
 import express from "express";
 // import usersRouter from "./routes/users.js";
-import resources from "./db/resource-data.js";
+// import resources from "./db/resource-data.js";
+import getAllResources from "./models/models.js";
 
 const app = express();
 
@@ -14,13 +15,14 @@ const app = express();
 //    });
 // });
 
-app.get("/", function (req, res, next) {
-   res.json({ message: "here are all the resources", payload: resources });
+app.get("/", async function (req, res, next) {
+  const resources = await getAllResources();
+  res.json({ message: "here are all the resources", payload: resources });
 });
 
 app.use(function (err, req, res, next) {
-   console.error(err.stack);
-   res.status(500).json(err);
+  console.error(err.stack);
+  res.status(500).json(err);
 });
 
 export default app;
