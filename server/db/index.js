@@ -1,6 +1,7 @@
 import pg from "pg";
-import * as config from "../config.js";
-console.log(process.env.TESTING);
+import { config } from "../config.js";
+// console.log(process.env.TESTING);
+console.log(config.dbhost);
 const pool = new pg.Pool({
    host: config.dbHost,
    database: config.db,
