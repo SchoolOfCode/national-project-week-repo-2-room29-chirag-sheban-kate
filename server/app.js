@@ -1,7 +1,11 @@
 import express from "express";
 // import usersRouter from "./routes/users.js";
 // import resources from "./db/resource-data.js";
-import getAllResources from "./models/models.js";
+import {
+   getAllResources,
+   getResourcesById,
+   getResourcesByTitle,
+} from "./models/models.js";
 
 const app = express();
 
@@ -15,14 +19,36 @@ const app = express();
 //    });
 // });
 
-app.get("/", async function (req, res, next) {
-  const resources = await getAllResources();
-  res.json({ message: "here are all the resources", payload: resources });
+//get all resources
+app.get("/resources", async function (req, res, next) {
+   const title = req.query.title;
+
+   if (title) {
+      const searchResults = await getResourcesByTitle(title);
+      res.json({
+         success: true,
+         message: `Searched titles for ${title}`,
+         payload: searchResults,
+      });
+      return;
+   }
+   const resources = await getAllResources();
+   res.json({ message: "here are all the resources", payload: resources });
+});
+
+//get resources by id
+app.get("/resources/:id", async function (req, res, next) {
+   const id = req.params.id;
+   const resource = await getResourcesById(id);
+   res.json({
+      message: "here is the requested resource by id",
+      payload: resource,
+   });
 });
 
 app.use(function (err, req, res, next) {
-  console.error(err.stack);
-  res.status(500).json(err);
+   console.error(err.stack);
+   res.status(500).json(err);
 });
 
 export default app;
