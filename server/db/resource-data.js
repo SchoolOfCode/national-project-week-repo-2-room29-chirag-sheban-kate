@@ -14,7 +14,8 @@ const resources = [
     topic: "react",
     resource_type: "video",
     week: "7",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     url: "https://www.youtube.com/watch?v=O6P86uwfdR0",
     description: "YouTube",
   },
@@ -23,7 +24,8 @@ const resources = [
     topic: "HTML/CSS",
     resource_type: "video",
     week: "1",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     url: "https://www.youtube.com/watch?v=HpyrfR1DUlc",
     description: "YouTube",
   },
@@ -32,7 +34,8 @@ const resources = [
     topic: "JavaScript",
     resource_type: "video",
     week: "3",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     url: "https://www.youtube.com/watch?v=568g8hxJJp4&t=37s",
     description: "YouTube",
   },
@@ -41,7 +44,8 @@ const resources = [
     topic: "SQL",
     resource_type: "video",
     week: "5",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
     url: "https://www.youtube.com/watch?v=9yeOJ0ZMUYw",
     description: "YouTube",
   },
@@ -50,7 +54,8 @@ const resources = [
     topic: "javaScript",
     resource_type: "blog",
     week: "0",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     url: "https://dev.to/zhiyueyi/variable-declaration-in-javascript-var-let-or-const-1789",
     description: "blog",
   },
@@ -59,7 +64,8 @@ const resources = [
     topic: "javaScript",
     resource_type: "blog",
     week: "0",
-    thumbnail: "video.img",
+    thumbnail:
+      "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     url: "https://www.freecodecamp.org/news/what-is-a-function-javascript-function-examples/",
     description: "blog",
   },
