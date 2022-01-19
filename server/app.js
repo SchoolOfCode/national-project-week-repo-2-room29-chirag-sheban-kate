@@ -5,6 +5,7 @@ import {
    getAllResources,
    getResourcesById,
    getResourcesByTitle,
+   updateResourceById,
 } from "./models/models.js";
 
 const app = express();
@@ -46,7 +47,26 @@ app.get("/resources/:id", async function (req, res, next) {
    });
 });
 
-//UPDATE
+app.put("/resources/:id", async function (req, res, next) {
+   const id = req.params.id;
+   const { title, topic, resource_type, week, thumbnail, url, description } =
+      req.body;
+   const updatedResource = await updateResourceById(
+      title,
+      topic,
+      resource_type,
+      week,
+      thumbnail,
+      url,
+      description,
+      id
+   );
+   res.json({
+      message: "here is the updated resource",
+      payload: updatedResource,
+   });
+});
+
 //DELETE
 //POST
 
