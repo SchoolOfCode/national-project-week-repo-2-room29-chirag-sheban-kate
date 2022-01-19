@@ -1,0 +1,5 @@
+export const dbHost= process.env.HOST,
+export const db = process.env.DATABASE,
+export const dbUser = process.env.USER,
+export const dbPort = process.env.PORT,
+export const dbPassword = process.env.PASSWORD,

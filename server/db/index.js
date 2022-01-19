@@ -1,11 +1,13 @@
 import pg from "pg";
+import * as config from "../config.js";
 console.log(process.env.TESTING);
 const pool = new pg.Pool({
-   host: process.env.HOST,
-   database: process.env.DATABASE,
-   user: process.env.USER,
-   port: process.env.PORT,
-   password: process.env.PASSWORD,
+   host: config.dbHost,
+   database: config.db,
+   user: config.dbUser,
+   port: config.dbPort,
+   password: config.dbPassword,
+
    // connectionString: process.env.DATABASE_URL,
    // max: 20,
    // idleTimeoutMillis: 30000,
