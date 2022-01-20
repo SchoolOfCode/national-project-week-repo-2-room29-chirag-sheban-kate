@@ -46,7 +46,7 @@ export async function updateResourceById(
    resourceId
 ) {
    const data = await query(
-      "UPDATE resources SET title = $1, topic = $2, resource_type = $3, week = $4, thumbnail = $5, url = $6, description = $7 WHERE id = $8 RETURNING *;",
+      "UPDATE resources SET title = $1, topic = $2, resource_type = $3, week = $4, thumbnail = $5, url = $6, description = $7 WHERE resourceid = $8 RETURNING *;",
       [
          title,
          topic,
@@ -62,7 +62,7 @@ export async function updateResourceById(
 }
 
 export async function deleteResourcesById(resourceId) {
-   const data = await query("DELETE * FROM resources WHERE resourceid = $1;", [
+   const data = await query("DELETE FROM resources WHERE resourceid = $1;", [
       resourceId,
    ]);
    console.log(data.rows);

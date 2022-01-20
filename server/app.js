@@ -7,6 +7,7 @@ import {
    getResourcesByTitle,
    updateResourceById,
    addNewResource,
+   deleteResourcesById,
 } from "./models/models.js";
 
 const app = express();
@@ -42,6 +43,15 @@ app.get("/resources", async function (req, res, next) {
 app.get("/resources/:id", async function (req, res, next) {
    const id = req.params.id;
    const resource = await getResourcesById(id);
+   res.json({
+      message: "here is the requested resource by id",
+      payload: resource,
+   });
+});
+
+app.delete("/resources/:id", async function (req, res, next) {
+   const id = req.params.id;
+   const resource = await deleteResourcesById(id);
    res.json({
       message: "here is the requested resource by id",
       payload: resource,
@@ -88,7 +98,6 @@ app.post("/resources", async function (req, res, next) {
 });
 
 //DELETE
-//POST
 
 app.use(function (err, req, res, next) {
    console.error(err.stack);
