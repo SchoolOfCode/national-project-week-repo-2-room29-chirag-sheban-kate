@@ -31,10 +31,11 @@ export async function addNewResource(
       "INSERT INTO resources (title, topic, resource_type, week,thumbnail, url, description) VALUES($1, $2, $3, $4, $5, $6, $7);",
       [title, topic, resource_type, week, thumbnail, url, description]
    );
+
    return data.rows;
 }
 
-export function updateResourceById(
+export async function updateResourceById(
    title,
    topic,
    resource_type,

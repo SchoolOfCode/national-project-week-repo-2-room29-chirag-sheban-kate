@@ -6,11 +6,12 @@ import {
    getResourcesById,
    getResourcesByTitle,
    updateResourceById,
+   addNewResource,
 } from "./models/models.js";
 
 const app = express();
 
-// app.use(express.json());
+app.use(express.json());
 
 // app.use("/users", usersRouter);
 
@@ -64,6 +65,25 @@ app.put("/resources/:id", async function (req, res, next) {
    res.json({
       message: "here is the updated resource",
       payload: updatedResource,
+   });
+});
+
+app.post("/resources", async function (req, res, next) {
+   const { title, topic, resource_type, week, thumbnail, url, description } =
+      req.body;
+   const newResource = await addNewResource(
+      title,
+      topic,
+      resource_type,
+      week,
+      thumbnail,
+      url,
+      description
+   );
+   res.json({
+      success: true,
+      message: "new resource added!",
+      payload: newResource,
    });
 });
 
