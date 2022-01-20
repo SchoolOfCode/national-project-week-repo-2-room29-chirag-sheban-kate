@@ -1,9 +1,9 @@
 export const config = {
-   dbHost: process.env.HOST,
-   db: process.env.DATABASE,
-   dbUser: process.env.USER,
-   dbPort: process.env.PORT,
-   dbPassword: process.env.PASSWORD,
+  dbHost: process.env.PGHOST,
+  db: process.env.PGDATABASE,
+  dbUser: process.env.PGUSER,
+  dbPort: process.env.PGPORT,
+  dbPassword: process.env.PGPASSWORD,
 };
 
 export default config;
