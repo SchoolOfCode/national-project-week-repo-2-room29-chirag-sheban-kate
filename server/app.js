@@ -25,7 +25,15 @@ app.use(express.json());
 // });
 
 //get all resources
+app.get("/", async function (req, res, next) {
+  console.log("working, testing");
+  res.json({
+    message: "connected to local server",
+  });
+});
+
 app.get("/resources", async function (req, res, next) {
+  console.log("getting resources");
   const title = req.query.title;
 
   if (title) {
